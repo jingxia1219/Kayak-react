@@ -1,0 +1,57 @@
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.airline-header {
+  position: relative;
+  top: 67px;
+  left: 94px;
+  display: flex;
+  /* margin: 67px 94px; */
+  padding: 0;
+  width: 100%;
+}
+
+p.airlines {
+  display: block;
+  margin: 0;
+  font-family: HelveticaNeue;
+  font-size: 44px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.main-content {
+  padding: 0;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  display: flex;
+  background-color: #f9fafb;
+  width: 100vw;
+  height: 100vh;
+}
+.logo {
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+}
+
+.logo svg {
+  position: fixed;
+  /* supposed to be 19px, but there's a white space line above*/
+  top: 19px;
+  margin-bottom: 19px;
+  left: 16px;
+}
