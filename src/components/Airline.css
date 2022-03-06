@@ -20,6 +20,7 @@
 }
 
 .airline-list {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +28,8 @@
   border-radius: 8px;
   width: 300px;
   height: 240px;
+  max-width: 300px;
+  max-height: 240px;
   margin-bottom: 16px;
   /* border-style: outset; */
   box-shadow: 2px 2px 8px lightgray;
@@ -34,3 +37,31 @@
   margin-right: 16px;
   /* box-shadow: 0 -1px 4px 0 rgba(25,32,36, 0.04), 0 3px 6px 0 rgba(25,32,36, 0.16); */
 }
+.alliance-name,
+.phone-number {
+  display: none;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: normal;
+  color: #192024;
+}
+.website {
+  display: none;
+  font-size: 14px;
+  font-weight: normal;
+  color: #5a6872;
+}
+
+.airline-list:hover .alliance-name {
+  display: block;
+}
+.airline-list:hover .phone-number {
+  display: block;
+}
+.airline-list:hover .website {
+  display: block;
+}
+
+/* .airline-name:hover{
+    top:-5px
+} */
