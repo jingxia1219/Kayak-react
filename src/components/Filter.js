@@ -9,15 +9,17 @@ function Filter() {
     const alliance = allianceCtx.alliances;
     if (event.target.checked) {
       if (!allianceCtx.checkStatus) {
-        allianceCtx.getAlliance(event.target.value);
+        //first time checking box
+        allianceCtx.getAlliance([event.target.value]);
         allianceCtx.checkbox();
       } else if (!alliance.includes(event.target.value)) {
         //clicked and not in arr
         allianceCtx.getAlliance([...alliance, event.target.value]);
       }
     } else if (!event.target.checked) {
-      //not selected
+      //unselected
       if (alliance.includes(event.target.value)) {
+        console.log("aliance,21", alliance); //'SA' not array
         let temp = alliance;
         // console.log('temp,',temp)
         temp = temp.filter((el) => el !== event.target.value);
