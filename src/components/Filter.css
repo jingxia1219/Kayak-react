@@ -1,24 +1,23 @@
 .filter-container {
-  position: fixed;
-  justify-content: left;
-  top: 200px;
-  left: 94px;
+  margin: 0;
+  padding-top: 73px;
+  padding-bottom: 56px;
+  /* padding: 0; */
 }
 
 .filter-title span {
-  margin-bottom: 0;
+  margin-bottom: 23px;
   padding: 0;
-  margin-left: 0;
 }
-.filter-title h5 {
+.Filter-by-Alliances {
   font-family: HelveticaNeue;
   font-size: 16px;
   font-weight: bold;
   color: #192024;
+  padding-bottom: 23px;
 }
 
 input {
-  /* background-color: blue; */
   margin-left: 0;
   height: 20px;
   width: 20px;
@@ -35,7 +34,6 @@ label {
 }
 
 .filter-checkboxs {
-  margin-top: -10px;
   display: flex;
   justify-content: flex-start;
   align-content: left;

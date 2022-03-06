@@ -1,26 +1,38 @@
-html {
+html,
+body {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: none;
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
 }
 
-.App {
-  font-family: sans-serif;
-  text-align: center;
+.header {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 19px;
+  padding-top: 19px;
+  padding-left: 16px;
+  background-color: #ffffff;
+  border-bottom: 1.5px solid rgb(238, 237, 237);
 }
 
-.airline-header {
+.main-content {
+  /* position: relative; */
+  padding-top: 67px;
+  padding-left: 94px;
+  background-color: #f9fafb;
+  width: 100vw;
+  height: 100vh;
+}
+
+.airline-title {
+  margin: 0;
   position: relative;
-  top: 67px;
-  left: 94px;
-  display: flex;
-  /* margin: 67px 94px; */
-  padding: 0;
-  width: 100%;
+  /* padding-top: 67px;
+  padding-left: 94px; */
 }
 
 p.airlines {
@@ -31,27 +43,5 @@ p.airlines {
   font-weight: 900;
   color: #000000;
 }
-
-.main-content {
-  padding: 0;
-  position: fixed;
-  top: 57px;
-  left: 0;
-  display: flex;
-  background-color: #f9fafb;
-  width: 100vw;
-  height: 100vh;
-}
-.logo {
-  padding: 0;
-  margin-top: 0;
-  display: flex;
-}
-
-.logo svg {
-  position: fixed;
-  /* supposed to be 19px, but there's a white space line above*/
-  top: 19px;
-  margin-bottom: 19px;
-  left: 16px;
+.filter {
 }

@@ -1,17 +1,46 @@
 import "./Filter.css";
+import { useContext } from "react";
+import AllianceContext from "./AllianceContext";
 
 function Filter() {
+  const allianceCtx = useContext(AllianceContext);
+
+  function checkBoxClickHandler(event) {
+    const alliance = allianceCtx.alliances;
+    if (event.target.checked) {
+      if (!allianceCtx.checkStatus) {
+        allianceCtx.getAlliance(event.target.value);
+        allianceCtx.checkbox();
+      } else if (!alliance.includes(event.target.value)) {
+        //clicked and not in arr
+        allianceCtx.getAlliance([...alliance, event.target.value]);
+      }
+    } else if (!event.target.checked) {
+      //not selected
+      if (alliance.includes(event.target.value)) {
+        let temp = alliance;
+        // console.log('temp,',temp)
+        temp = temp.filter((el) => el !== event.target.value);
+        console.log("temp,", temp);
+        allianceCtx.getAlliance(temp);
+      }
+    }
+    // allianceCtx.getAlliance(alliance)
+    console.log("filter,line32, alliance", alliance);
+  }
+
+  console.log("Filter, ctx.alliances", allianceCtx.alliances);
   return (
     <div className="filter-container">
       <span className="filter-title">
-        <h5>Filter by Alliances</h5>
+        <div className="Filter-by-Alliances">Filter by Alliances</div>
       </span>
       <div className="filter-checkboxs">
-        <input type="checkbox" />
+        <input value="OW" onClick={checkBoxClickHandler} type="checkbox" />
         <label>Oneworld</label>
-        <input type="checkbox" />
+        <input value="ST" onClick={checkBoxClickHandler} type="checkbox" />
         <label>Sky Team</label>
-        <input type="checkbox" />
+        <input value="SA" onClick={checkBoxClickHandler} type="checkbox" />
         <label>Star Alliance</label>
       </div>
     </div>
